@@ -1,24 +1,25 @@
 // Get references to the tbody element, input field and button
 var $tbody = document.querySelector("tbody");
-var $date = document.querySelector("#date");
-var $city = document.querySelector("#city");
-var $state = document.querySelector("#state");
-var $country = document.querySelector("#country");
-var $shape = document.querySelector("#shape");
-var $comment = document.querySelector("#comment");
+var $datedata = document.querySelector("#date");
+var $citydata = document.querySelector("#city");
+var $statedata = document.querySelector("#state");
+var $countrydata = document.querySelector("#country");
+var $shapedata = document.querySelector("#shape");
+var $durationdata = document.querySelector("#duration");
+var $commentdata = document.querySelector("#comment");
 
 // Add an event listener to the searchButton, call handleSearchButtonClick when clicked
 $searchBtn.addEventListener("click", handleSearchButtonClick);
 
-// Set filteredAddresses to addressData initially
-var filteredAddresses = addressData;
+// Set filtereData to CompleteData initially
+var filteredData = CompleteData;
 
 // renderTable renders the filteredAddresses to the tbody
 function renderTable() {
   $tbody.innerHTML = "";
-  for (var i = 0; i < filteredAddresses.length; i++) {
+  for (var i = 0; i < filteredData.length; i++) {
     // Get get the current address object and its fields
-    var address = filteredAddresses[i];
+    var address = filteredData[i];
     var fields = Object.keys(address);
     // Create a new row in the tbody, set the index to be i + startingIndex
     var $row = $tbody.insertRow(i);
@@ -33,13 +34,27 @@ function renderTable() {
 
 function handleSearchButtonClick() {
   // Format the user's search by removing leading and trailing whitespace, lowercase the string
-  var filterState = $stateInput.value.trim().toLowerCase();
+  var filtereData = $datedata.value.trim().toLowerCase();
+  var filterCity = $citydata.value.trim().toLowerCase();
+  var filterCountry = $countrydata.value.trim().toLowerCase();
+  var filterState = $statedata.value.trim().toLowerCase();
+  var filterDuration = $durationdata.value.trim().toLowerCase();
+  var filterShape = $shapedata.value.trim().toLowerCase();
 
-  // Set filteredAddresses to an array of all addresses whose "state" matches the filter
-  filteredAddresses = addressData.filter(function(address) {
-    var addressState = address.state.toLowerCase();
+  // Set filteredAddresses to an array of all addresses whose fields matches the filter
+  filteredData = DataSet.filter(function(data) {
+    var filteredDate = data.datetime.toLowerCase();
+    var filteredCity = data.city.toLowerCase();
+    var filteredState = data.state.toLowerCase();
+    var filteredCountry = data.country.toLowerCase();
+    var filteredDuration = data.durationdata.toLowerCase();
+    var filteredShape = data.shape.toLowerCase();
 
     // If true, add the address to the filteredAddresses, otherwise don't add it to filteredAddresses
+    if 
+
+
+
     return addressState === filterState;
   });
   renderTable();
@@ -47,3 +62,30 @@ function handleSearchButtonClick() {
 
 // Render the table for the first time on page load
 renderTable();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
