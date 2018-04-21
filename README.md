@@ -1,2 +1,2 @@
 # Portfolio
-Projects completed in RBC
+Projects completed in Rutgers Data Science Bootcamp
