@@ -1,0 +1,1371 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10500.18.0305.1200                               -->
+<workbook source-build='10.5.2 (10500.18.0305.1200)' source-platform='mac' version='10.5' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='merged' inline='true' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' version='10.5'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='merged' name='textscan.04r1pbi0zph0ve19opj6011z2bx2'>
+            <connection class='textscan' directory='/Users/shar/Desktop/Portfolio/Citi Bike Tableau Visualizations' filename='merged.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.04r1pbi0zph0ve19opj6011z2bx2' name='merged.csv' table='[merged#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Trip Duration' ordinal='0' />
+            <column datatype='datetime' name='Start Time' ordinal='1' />
+            <column datatype='datetime' name='Stop Time' ordinal='2' />
+            <column datatype='integer' name='Start Station ID' ordinal='3' />
+            <column datatype='string' name='Start Station Name' ordinal='4' />
+            <column datatype='real' name='Start Station Latitude' ordinal='5' />
+            <column datatype='real' name='Start Station Longitude' ordinal='6' />
+            <column datatype='integer' name='End Station ID' ordinal='7' />
+            <column datatype='string' name='End Station Name' ordinal='8' />
+            <column datatype='real' name='End Station Latitude' ordinal='9' />
+            <column datatype='real' name='End Station Longitude' ordinal='10' />
+            <column datatype='integer' name='Bike ID' ordinal='11' />
+            <column datatype='string' name='User Type' ordinal='12' />
+            <column datatype='integer' name='Birth Year' ordinal='13' />
+            <column datatype='integer' name='Gender' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Trip Duration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Trip Duration]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Trip Duration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Start Time]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Start Time</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Stop Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Stop Time]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Stop Time</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Station ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Start Station ID]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Start Station ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Station Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Start Station Name]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Start Station Name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Station Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Start Station Latitude]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Start Station Latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Station Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Start Station Longitude]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Start Station Longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Station ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[End Station ID]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>End Station ID</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Station Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[End Station Name]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>End Station Name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Station Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[End Station Latitude]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>End Station Latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Station Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[End Station Longitude]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>End Station Longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bike ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bike ID]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Bike ID</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>User Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[User Type]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>User Type</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Birth Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Birth Year]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Birth Year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[merged.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Bike ID]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[Birth Year]' role='dimension' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[End Station Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[End Station Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' default-format='*00000' name='[Start Station ID]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column datatype='real' default-format='*00000' name='[Start Station Latitude (copy)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal'>
+        <calculation class='tableau' formula='[Start Station Latitude]' />
+      </column>
+      <column aggregation='Avg' datatype='real' name='[Start Station Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Start Station Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column-instance column='[Start Station ID]' derivation='Count' name='[cnt:Start Station ID:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Start Station ID]' derivation='CountD' name='[ctd:Start Station ID:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.462995' measure-ordering='alphabetic' measure-percentage='0.537005' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[ctd:Start Station ID:ok]' type='shape'>
+            <map to='asterisk'>
+              <bucket>778498</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>3331317</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>7554564</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>17690205</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>25939368</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>63451430</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>0</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>2424240</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>6220110</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>14999139</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>23688838</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>40024017</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>784000</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>3537710</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>7617708</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>18838212</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>26824070</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>114237216</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>1030047</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>4751228</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>8146446</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>21140616</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>28998541</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>1326208</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>5390683</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>8920590</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>22451820</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>29029455</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>199714</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>2825985</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>7042160</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>17163608</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>25435596</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>49835610</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>1933746</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>5541864</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>11887350</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>22954475</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>29339522</bucket>
+            </map>
+            <map to='square'>
+              <bucket>1</bucket>
+            </map>
+            <map to='square'>
+              <bucket>23982</bucket>
+            </map>
+            <map to='square'>
+              <bucket>2621540</bucket>
+            </map>
+            <map to='square'>
+              <bucket>6842500</bucket>
+            </map>
+            <map to='square'>
+              <bucket>16607202</bucket>
+            </map>
+            <map to='square'>
+              <bucket>24101552</bucket>
+            </map>
+            <map to='square'>
+              <bucket>40076232</bucket>
+            </map>
+            <map to='times'>
+              <bucket>585494</bucket>
+            </map>
+            <map to='times'>
+              <bucket>2975516</bucket>
+            </map>
+            <map to='times'>
+              <bucket>7500357</bucket>
+            </map>
+            <map to='times'>
+              <bucket>17412765</bucket>
+            </map>
+            <map to='times'>
+              <bucket>25586624</bucket>
+            </map>
+            <map to='times'>
+              <bucket>61727919</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>823296</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>4420581</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>7686316</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>20477016</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>27543390</bucket>
+            </map>
+          </encoding>
+          <encoding attr='shape' field='[cnt:Start Station ID:ok]' type='shape'>
+            <map to='asterisk'>
+              <bucket>238</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>957</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>2331</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>5433</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>8036</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>19810</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>778498</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>3331317</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>7554564</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>17690205</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>25939368</bucket>
+            </map>
+            <map to='asterisk'>
+              <bucket>63451430</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>0</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>666</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>1945</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>4677</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>7366</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>12251</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>2424240</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>6220110</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>14999139</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>23688838</bucket>
+            </map>
+            <map to='circle'>
+              <bucket>40024017</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>245</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>1109</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>2349</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>5898</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>8422</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>35856</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>784000</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>3537710</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>7617708</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>18838212</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>26824070</bucket>
+            </map>
+            <map to='diamond'>
+              <bucket>114237216</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>323</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>1381</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>2541</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>6623</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>9031</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>1030047</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>4751228</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>8146446</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>21140616</bucket>
+            </map>
+            <map to='down-triangle'>
+              <bucket>28998541</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>416</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>1643</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>2779</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>6866</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>9035</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>1326208</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>5390683</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>8920590</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>22451820</bucket>
+            </map>
+            <map to='left-triangle'>
+              <bucket>29029455</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>61</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>879</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>2125</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>5236</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>7914</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>15598</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>199714</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>2825985</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>7042160</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>17163608</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>25435596</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>49835610</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>606</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>1734</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>3686</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>7009</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>9206</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>1933746</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>5541864</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>11887350</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>22954475</bucket>
+            </map>
+            <map to='right-triangle'>
+              <bucket>29339522</bucket>
+            </map>
+            <map to='square'>
+              <bucket>1</bucket>
+            </map>
+            <map to='square'>
+              <bucket>7</bucket>
+            </map>
+            <map to='square'>
+              <bucket>820</bucket>
+            </map>
+            <map to='square'>
+              <bucket>2076</bucket>
+            </map>
+            <map to='square'>
+              <bucket>5074</bucket>
+            </map>
+            <map to='square'>
+              <bucket>7382</bucket>
+            </map>
+            <map to='square'>
+              <bucket>12516</bucket>
+            </map>
+            <map to='square'>
+              <bucket>23982</bucket>
+            </map>
+            <map to='square'>
+              <bucket>2621540</bucket>
+            </map>
+            <map to='square'>
+              <bucket>6842500</bucket>
+            </map>
+            <map to='square'>
+              <bucket>16607202</bucket>
+            </map>
+            <map to='square'>
+              <bucket>24101552</bucket>
+            </map>
+            <map to='square'>
+              <bucket>40076232</bucket>
+            </map>
+            <map to='times'>
+              <bucket>182</bucket>
+            </map>
+            <map to='times'>
+              <bucket>908</bucket>
+            </map>
+            <map to='times'>
+              <bucket>2147</bucket>
+            </map>
+            <map to='times'>
+              <bucket>5395</bucket>
+            </map>
+            <map to='times'>
+              <bucket>7918</bucket>
+            </map>
+            <map to='times'>
+              <bucket>19393</bucket>
+            </map>
+            <map to='times'>
+              <bucket>585494</bucket>
+            </map>
+            <map to='times'>
+              <bucket>2975516</bucket>
+            </map>
+            <map to='times'>
+              <bucket>7500357</bucket>
+            </map>
+            <map to='times'>
+              <bucket>17412765</bucket>
+            </map>
+            <map to='times'>
+              <bucket>25586624</bucket>
+            </map>
+            <map to='times'>
+              <bucket>61727919</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>256</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>1306</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>2393</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>6264</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>8610</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>823296</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>4420581</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>7686316</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>20477016</bucket>
+            </map>
+            <map to='triangle'>
+              <bucket>27543390</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='# of Trips'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Trips Recorded</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[cnt:Number of Records:qk]</rows>
+        <cols onLeft='true' />
+      </table>
+    </worksheet>
+    <worksheet name='Map of Rides'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Athelas' fontsize='22'>Map of Rides</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column aggregation='Avg' datatype='real' name='[Start Station Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Start Station Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='integer' name='[Trip Duration]' role='measure' type='quantitative' />
+            <column-instance column='[Trip Duration]' derivation='Avg' name='[avg:Trip Duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Trip Duration]' derivation='CountD' name='[ctd:Trip Duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Station Latitude]' derivation='None' name='[none:Start Station Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Station Longitude]' derivation='None' name='[none:Start Station Longitude:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[ctd:Trip Duration:qk]' included-values='in-range'>
+            <min>0</min>
+            <max>2384</max>
+          </filter>
+          <slices>
+            <column>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[ctd:Trip Duration:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[avg:Trip Duration:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Latitude:qk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Longitude:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Peak Bike Usage by Month'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Peak Bike Usage </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Trip Duration]' role='measure' type='quantitative' />
+            <column-instance column='[Trip Duration]' derivation='Avg' name='[avg:Trip Duration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Time]' derivation='Month' name='[mn:Start Time:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[avg:Trip Duration:qk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[mn:Start Time:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Popular Start Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Popular Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='integer' default-format='*00000' name='[Start Station ID]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+            <column datatype='real' default-format='*00000' name='[Start Station Latitude (copy)]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal'>
+              <calculation class='tableau' formula='[Start Station Latitude]' />
+            </column>
+            <column aggregation='Avg' datatype='real' name='[Start Station Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[Start Station Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column-instance column='[Start Station ID]' derivation='Count' name='[cnt:Start Station ID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Start Station Latitude]' derivation='Count' name='[cnt:Start Station Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Station Latitude (copy)]' derivation='None' name='[none:Start Station Latitude (copy):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Start Station Latitude]' derivation='None' name='[none:Start Station Latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Station Longitude]' derivation='None' name='[none:Start Station Longitude:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Longitude:qk]' field-type='quantitative' max='-8239828.8888954772' min='-8249793.5065415883' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Latitude:qk]' field-type='quantitative' max='4974229.338640498' min='4968803.6281709876' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[cnt:Start Station Latitude:qk]' />
+              <color column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[cnt:Start Station ID:ok]' />
+              <text column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Latitude (copy):ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Latitude:qk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Longitude:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Gender Breakdown</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='integer' name='[Gender]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Gender]' derivation='CountD' name='[ctd:Gender:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[ctd:Gender:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='datetime' name='[Start Time]' role='dimension' type='ordinal' />
+            <column-instance column='[Start Time]' derivation='Hour' name='[hr:Start Time:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Start Time]' derivation='Month' name='[mn:Start Time:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[mn:Start Time:ok]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[hr:Start Time:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Top End Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='string' name='[End Station Name]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[End Station Name]' derivation='None' name='[none:End Station Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:End Station Name:nk]' direction='DESC' using='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[sum:Number of Records:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:End Station Name:nk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[cnt:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Top Start Stations'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged' name='federated.1o1d0860ts4bvp1fxoq1b0b6x1we' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o1d0860ts4bvp1fxoq1b0b6x1we'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='string' name='[Start Station Name]' role='dimension' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Count' name='[cnt:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Start Station Name]' derivation='None' name='[none:Start Station Name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Name:nk]' direction='DESC' using='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[sum:Number of Records:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[none:Start Station Name:nk]</rows>
+        <cols>[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[cnt:Number of Records:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false'>
+        <zone h='40250' id='1' name='Top Start Stations' w='65000' x='3300' y='4125'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+        <zone h='38250' id='2' name='Top End Stations' w='65800' x='2400' y='46250'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='4' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='# of Trips'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Map of Rides'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1o1d0860ts4bvp1fxoq1b0b6x1we].[avg:Trip Duration:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Peak Bike Usage by Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Popular Start Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Top Start Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Top End Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Top End Stations' />
+        <viewpoint name='Top Start Stations' />
+      </viewpoints>
+      <active id='1' />
+    </window>
+  </windows>
+</workbook>
